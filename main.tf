@@ -1,6 +1,6 @@
 resource "azurerm_container_registry" "acr" {
   count               = var.resource_count
-  name                = "${var.environment}-${var.location}-${var.name}"
+  name                = "${var.environment}${var.location}${var.name}"
   location            = var.location
   resource_group_name = var.resource_group_name
 
