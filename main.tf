@@ -12,8 +12,8 @@ resource "azurerm_container_registry" "acr" {
     for_each = var.georeplications
     content {
       location                = georeplications.value.location
-      tags                    = georeplications.value.tags
-      zone_redundancy_enabled = georeplications.value.zone_redundancy_enabled
+      tags                    = try(georeplications.value.tags, null)
+      zone_redundancy_enabled = try(georeplications.value.zone_redundancy_enabled, null)
     }
   }
 }
