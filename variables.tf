@@ -1,7 +1,7 @@
 variable "resource_count" {
   type        = number
   default     = 0
-  description = "The number of AKS clusters to provision."
+  description = "The number of ACR resources to provision."
 }
 
 variable "environment" {
